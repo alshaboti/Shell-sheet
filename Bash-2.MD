@@ -43,6 +43,7 @@ cat test # no changes
 ### disk usage
 ```
 du -sh  Desktop/ #s summary, h human terms
+du -csbh . # total acual size of the current directory.
 ```
 ## disk free 
 ```
