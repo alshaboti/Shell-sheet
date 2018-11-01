@@ -39,7 +39,11 @@ sed 's/hey/hi/' test
 sed 's/hey/hi/g' test 
 cat test # no changes 
 ```
-
+Find and execute. 
+```
+# find the file and open it in vim, {} a place holder for the returned file from find.
+find . -iname "somewherefile.java" -exec vim {} \;
+```
 ### disk usage
 ```
 du -sh  Desktop/ #s summary, h human terms
