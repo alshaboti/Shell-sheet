@@ -1,4 +1,4 @@
-## From talk by Dan North at GOTO conf from [here](https://www.youtube.com/watch?v=7uwW20odwEk)
+## Some from talk by Dan North at GOTO conf from [here](https://www.youtube.com/watch?v=7uwW20odwEk)
 ### Every thing is file in Unix
 ```
 ls -l /dev/tty*
