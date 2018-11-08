@@ -44,6 +44,10 @@ Find and execute.
 # find the file and open it in vim, {} a place holder for the returned file from find.
 find . -iname "somewherefile.java" -exec vim {} \;
 ```
+Find all files that are readable by user1 (Useful for CTF). 
+```
+find / -user user1 -readable 2>/dev/null
+```
 ### disk usage
 ```
 du -sh  Desktop/ #s summary, h human terms
