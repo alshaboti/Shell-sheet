@@ -98,7 +98,12 @@ sayHi
 function sayHello(){
  echo "Hello $1! I am a function!"
 }
-sayHello Moh
+
+# run previous commands. 
+!! # show last command
+!-<n> # show the command number n from history 
+# or simply press CTL+p then enter.
+
 
 
 
