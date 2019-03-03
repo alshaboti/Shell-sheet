@@ -25,8 +25,14 @@ ls /proc/$$/cmdline # how process starts
 To kill a process you need its PID, so you may need to capture its PID when you create it. For example,
 ```
 gedit && geditPID=$!
+ps -p $!
+
 # later kill gedit
 kill $geditPID
+```
+To check which process this PID is. 
+```
+ps -p <processPID>
 ```
 ### Searching
 ```
