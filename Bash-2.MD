@@ -34,6 +34,35 @@ To check which process this PID is.
 ```
 ps -p <processPID>
 ```
+## Special characters
+### : character
+```
+# : is like true program
+: && echo 1
+# similar to 
+true && echo 1
+```
+To empty a file
+```
+: > data.xxx   # File "data.xxx" now empty.	      
+
+# Same effect as   cat /dev/null >data.xxx
+```
+To be used like pass in python
+```
+function f(){
+:
+}
+# empty function with NOP inside
+```
+### * character
+wildcard char to match any filename, if used with echo, it list current file names
+```
+echo *
+echo .*
+
+# like ls
+```
 ### Searching
 ```
 find his* 
