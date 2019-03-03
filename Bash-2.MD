@@ -81,3 +81,7 @@ return file descriptor for a temporary output, not accessable as regular file, b
 echo <(cat test.txt)
 less -f <(cat test.txt) # is show as a file, but it is just the output of cat !
 ```
+
+
+## Reference 
+[A full tutorial to Bash](http://www.tldp.org/LDP/abs/html/)
