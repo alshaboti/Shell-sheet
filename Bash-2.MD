@@ -7,7 +7,6 @@ ls -l /dev/sda*
 bwrt b for block device 
 ```
 
-
 each directory represnets process
 ```
 ls /proc
@@ -62,6 +61,37 @@ echo *
 echo .*
 
 # like ls
+```
+### $! 
+PID of the last program you run in the background exit code 
+```
+gedit &
+echo $! # gedit PID
+kill $! # or save it into variable to kill it later
+```
+### $?
+Exit status of the last program you run
+```
+true && echo $?  # output is 0
+false && echo $? # output is 1
+```
+### $0
+path to the shell you are using
+```
+echo $0
+# e.g. /usr/pkg/bin/zsh
+```
+### $$
+return current process PID
+```
+
+```
+## Control 
+```
+Ctrl + p # Go back to previouse commands
+Ctrl + A # go the begining of the current line
+Ctrl + E # go to the end of the line
+Ctrl + N # new command, earase the current line.
 ```
 ### Searching
 ```
