@@ -41,6 +41,12 @@ wc <(cat /usr/share/dict/american-english)
 # output                   
 # 123115  123115 1185564 /proc/self/fd/11
 ```
+Can be used to compare the content of two dictionarires
+```
+ cat  <(ls) <(ls ../tmp2)
+ echo <(ls) <(ls ../tmp2)
+ diff <(ls) <(ls ../tmp2)
+```
 [See hre more](http://tldp.org/LDP/abs/html/process-sub.html)
 
 ## Special characters
