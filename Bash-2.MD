@@ -22,7 +22,12 @@ file discriptors
 ```
 ls /proc/$$/cmdline # how process starts
 ```
-
+To kill a process you need its PID, so you may need to capture its PID when you create it. For example,
+```
+gedit && geditPID=$!
+# later kill gedit
+kill $geditPID
+```
 ### Searching
 ```
 find his* 
