@@ -33,6 +33,16 @@ To check which process this PID is.
 ```
 ps -p <processPID>
 ```
+
+### process substitution use files to communicate
+```
+wc <(cat /usr/share/dict/american-english)
+#   ^ no space between < and ( 
+# output                   
+# 123115  123115 1185564 /proc/self/fd/11
+```
+[See hre more](http://tldp.org/LDP/abs/html/process-sub.html)
+
 ## Special characters
 ### : character
 ```
@@ -83,9 +93,7 @@ echo $0
 ```
 ### $$
 return current process PID
-```
-
-```
+as above
 ## Control 
 ```
 Ctrl + p # Go back to previouse commands
