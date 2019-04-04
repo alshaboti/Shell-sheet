@@ -127,6 +127,8 @@ Find and execute.
 ```
 # find the file and open it in vim, {} a place holder for the returned file from find.
 find . -iname "somewherefile.java" -exec vim {} \;
+# find and replace file name by removing some characters `_:-`
+find .  -name '*.pdf' -exec sh -c 'if="{}"; of=$(echo $if|tr "=()_:-" " " ); mv "$if" "$of" ;' \;
 ```
 Find all files that are readable by user1 (Useful for CTF). 
 ```
