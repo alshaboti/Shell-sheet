@@ -47,19 +47,25 @@ ip link set veth0-red netns red
 ip link set veth0-green netns green
 ```
 check interfaces at each netns through ip netns exec red/green <cmd> or
+ ```
 #ip netns exec green bash , which let you switch to green netns
-  then use 
+```
+Then use 
+```
   #ip link list
   #ip link set veth0-green up 
   #ip address add 10.0.0.1/24 veth0-green 
+```
   or simply use
+```
   # ifconfig veth0-green 10.0.0.1/24 up , to replace the last two cmd
   # exit , to exit form green netns
+```
 do the same with blue with 10.0.0.2/24 instead. 
-
+```
 # ip netns exec red bash
 # ping 10.0.0.2
-
+```
 
 more about net-tools
 To remove all interface settings 
@@ -122,7 +128,7 @@ or dump it to a file
 ```
 sudo tcpdump -B 4096 -i enp2s0 -c 100 -n -w dumpfile.pcap
 ```
-------------------------------------------------------------------------------
+
 Create ssh keys for login remotely without password
 in host A:
 ```
@@ -138,7 +144,7 @@ chmod 600 authorized_keys
 ```
 DONE
 You can know ssh or scp from A to B without any password prompet
------------------------------
+
 install from github #if setup.py is available 
  ```
  git clone https://github.com/username/packg
