@@ -63,33 +63,48 @@ do the same with blue with 10.0.0.2/24 instead.
 
 more about net-tools
 To remove all interface settings 
+```
 #ifconfig eth0 0
-
-#ifconfig , only show up interfaces
-#ip link show , shows all interfaces up or down
-
-change mac address
+```
+Only show up interfaces
+```
+#ifconfig 
+```
+shows all interfaces up or down
+```
+#ip link show  
+```
+Change mac address
+```
 #ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF
-
+```
 set ip/masc and turn it on
+```
 #ifconfig eth0 10.0.0.1/24 up
-
+```
 show route table
+```
 # route
+```
 change default gw
+```
 # route del default gw 192.168.1.254 eth0
 # route add default gw 192.168.1.254 eth0
+```
 after each steo restart network service
+```
 /etc/init.d/networking restart
-
+```
 --------------------
 Check interface settings: IP/GW/DNS
+```
 nmcli dev show [<interfacename>] 
 nmcli dev show (show all)
-
+```
 #status of each interface
+```
 nmcli dev
-
+```
 -----------------
 tcpdump does not capture any packets or just few!!
 9 packets captured
@@ -100,28 +115,34 @@ tcpdump does not capture any packets or just few!!
 use -n option (don't resolve IPs to names), and option -B 
 to increase buffer size in KB. Hopfully kernell will not drop any pakcets, 
 if not use -c option and limit number of packets
-
+```
 sudo tcpdump -B 4096 -i enp2s0 -c 100 -n
+```
 or dump it to a file
+```
 sudo tcpdump -B 4096 -i enp2s0 -c 100 -n -w dumpfile.pcap
+```
 ------------------------------------------------------------------------------
 Create ssh keys for login remotely without password
 in host A:
+```
 ssh-keygen -t rsa
 press enter (keep password emtpy)
-
+```
 then copy /home/moh/.ssh/id_rsa.pub public key content 
 Go to host B:
 create authorized_keys file in .ssh folder (.ssh folder should have 700 permission)
 past id_rsa.pub in it, then 
+```
 chmod 600 authorized_keys
-
+```
 DONE
 You can know ssh or scp from A to B without any password prompet
 -----------------------------
 install from github #if setup.py is available 
- 
+ ```
  git clone https://github.com/username/packg
  cd packg
  sudo python setup.py install 
-you need python-setuptools to be installed 
+ ```
+you need python-setuptools installed 
